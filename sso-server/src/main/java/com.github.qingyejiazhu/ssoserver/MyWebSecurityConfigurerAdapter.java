@@ -31,14 +31,13 @@ public class MyWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-//                .httpBasic()
+              //  .httpBasic()
                 .formLogin()  // 更改为form表单登录
                 .and()
                 // 所有的请求都必须授权后才能访问
                 .authorizeRequests()
                 .anyRequest()
                 .authenticated();
-        ;
     }
 
     @Override
